@@ -1,0 +1,103 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+     {
+      "type": "Feature",
+      "geometry": {
+       "coordinates": [
+        5.376248,
+        43.296793
+       ],
+       "type": "Point"
+      },
+      "properties": {
+       "stop_name": "Canebi\u00e8re Bourse",
+       "stop_id": "StopArea:OM1Navitia:4401"
+      }
+     },
+     {
+      "type": "Feature",
+      "geometry": {
+       "coordinates": [
+        5.37418,
+        43.295637
+       ],
+       "type": "Point"
+      },
+      "properties": {
+       "stop_name": "Vieux-Port",
+       "stop_id": "StopArea:OM1Navitia:2285"
+      }
+     },
+     {
+      "type": "Feature",
+      "geometry": {
+       "coordinates": [
+        5.374497,
+        43.293263
+       ],
+       "type": "Point"
+      },
+      "properties": {
+       "stop_name": "Vieux Port Ballard",
+       "stop_id": "StopArea:OM1Navitia:4392"
+      }
+     },
+     {
+      "type": "Feature",
+      "geometry": {
+       "coordinates": [
+        5.37559,
+        43.290643
+       ],
+       "type": "Point"
+      },
+      "properties": {
+       "stop_name": "Breteuil Puget",
+       "stop_id": "StopArea:OM1Navitia:1444"
+      }
+     },
+     {
+      "type": "Feature",
+      "geometry": {
+       "coordinates": [
+        5.377051,
+        43.290349
+       ],
+       "type": "Point"
+      },
+      "properties": {
+       "stop_name": "Estrangin Puget",
+       "stop_id": "StopArea:OM1Navitia:1406"
+      }
+     },
+     {
+      "type": "Feature",
+      "geometry": {
+       "coordinates": [
+        5.378892,
+        43.290019
+       ],
+       "type": "Point"
+      },
+      "properties": {
+       "stop_name": "Pr\u00e9fecture",
+       "stop_id": "StopArea:OM1Navitia:386"
+      }
+     },
+     {
+      "type": "Feature",
+      "geometry": {
+       "coordinates": [
+        5.381183,
+        43.29026
+       ],
+       "type": "Point"
+      },
+      "properties": {
+       "stop_name": "Rome Peytral",
+       "stop_id": "StopArea:OM1Navitia:3952"
+      }
+     }
+    ]
+}
