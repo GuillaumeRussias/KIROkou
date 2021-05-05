@@ -9,8 +9,6 @@ sys.path.insert(0, parentdir)
 ###############
 
 import json
-
-
 def test_json_input():
     with open("Input/test.json","r") as json_file: #automatically close file
         json_dict = json.load(json_file)
@@ -20,5 +18,7 @@ def test_json_input():
     for key,value in json_dict.items():
         print(key,value)
     return json_dict
+
+#TODO : 
 
 test_json_input()
