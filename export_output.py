@@ -8,8 +8,6 @@ sys.path.insert(0, parentdir)
 
 ###############
 
-
-
 import json
 #export en json??
 
