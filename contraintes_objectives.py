@@ -16,7 +16,7 @@ class isAdmissible():
         for iti in self.input.itineraires :
             self.itineraires[str(iti["id"])] = iti
     
-    def check_itineraire(output):
+    def check_itineraire(self,output):
         for train_id,dico in output.items():
             itineraire = dico["itineraire"]
             itineraire_specs = self.itineraire[str(itineraire)]
@@ -38,7 +38,7 @@ class isAdmissible():
                 raise Exception("les sens ne coincident pas")
         return True
 
-    def check_interdictionQuai(output):
+    def check_interdictionQuai(self,output):
         for train_id,dico in output.items():
             voieAQuai = dico["voieAquai"]
             train = self.train[train_id]
@@ -56,7 +56,7 @@ class isAdmissible():
                         raise Exception("la voie en ligne n'est pas reliee avec ce quai")
         return True
 
-    def check_same_group(output):
+    def check_same_group(self,output):
         for group in self.input.trains :
             quai={}
             for train in group:
@@ -65,6 +65,12 @@ class isAdmissible():
             if len(quai.keys())!=1:
                 raise Exception("les trains d'un meme groupe doivent avoir le meme quai")  
         return True
+    
+    def __call__(self,output):
+        allisfine = self.check_same_group(output)
+        allisfine &= self.check_interdictionQuai(output)
+        allisfine &= self.check_itineraire(output)
+        return allisfine
 
     
 
