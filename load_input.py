@@ -48,6 +48,8 @@ class Input():
     
     def get_list_train(self):
         return numpy.concatenate(self.trains)
+    def get_list_train_id(self):
+        return [t["id"] for t in g for g in self.trains]
 
 
     
