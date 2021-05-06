@@ -38,6 +38,31 @@ class isAdmissible():
 
     def check_interdictionQuai():
         for train_id,dico in self.output.items():
+            voieAQuai_id = dico["voieAquai"]
+            train = find_in_2darray_where_id(self.input.trains, train_id)
+            voieEnLigne = train["voieEnLigne"]
+            typeM_train = train["typesMateriels"]
+            typeC_train = train["typeCirculation"]
+            
+            for interdiction in self.input.interdictionsQuais :
+                if voieAQuai_id in interdiction[" voiesAQuaiInterdites"]:
+                    if typeM_train in interdiction["typesMateriels"] :
+                        raise Exception("Ce type de Materiel n'a pas le droit de stationner sur ce quai")
+                    if typeC_train in interdiction["typesCirculation"] :
+                        raise Exception("Ce type de Circulation n'a pas le droit de stationner sur ce quai")
+                    if voieEnLigne in interdiction["voiesEnLigne"]:
+                        raise Exception("la voie en ligne n'est pas reliee avec ce quai")
+    def check_same_group():
+        for group in self.input.trains :
+            quai={}
+            for train in group:
+                train_id = group["id"]
+                quai[self.output[str(train_id)]["voieAQuai"]] = 0
+            if len(quai.keys())!=1:
+                raise quai  
+
+    
+
 
 
     
