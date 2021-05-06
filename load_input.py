@@ -9,6 +9,7 @@ sys.path.insert(0, parentdir)
 ###############
 
 import json
+import numpy
 
 
 class Input():
@@ -44,6 +45,11 @@ class Input():
     def __init__(self,name_input = "A", path_input = "Input/instances"):
         with open(f"{path_input}/{name_input}.json","r") as json_file:
             self.__dict__ = json.load(json_file)
+    
+    def get_list_train(self):
+        return numpy.concatenate(self.trains)
+
+
     
     
 input_a = Input("A")

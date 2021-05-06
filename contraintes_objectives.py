@@ -59,7 +59,7 @@ class isAdmissible():
                 train_id = group["id"]
                 quai[self.output[str(train_id)]["voieAQuai"]] = 0
             if len(quai.keys())!=1:
-                raise quai  
+                raise Exception("les trains d'un meme groupe doivent avoir le mem quai")  
 
     
 
