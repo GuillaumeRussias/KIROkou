@@ -1,5 +1,5 @@
 
-class isAdmissible():
+class isAdmissible :
     def __init__(_input):
         self.input=_input
         self.put_itineraires_in_dict()
