@@ -21,12 +21,12 @@ class Output():
             id_ = trains_id_list[i]
             affect_ = train_affect_list[i]
             itineraire_ = train_itineraire_list[i]
-            self.json_dict[str(id_)]= {" voieAQuai ": affect_," itineraire ":itineraire_}
+            self.json_dict[str(id_)]= {"voieAQuai": affect_,"itineraire":itineraire_}
         
     def export(self):
         json_str = json.dumps(self.json_dict)
         with open(f"Output/{self.name}.json","w") as json_file:
             json_file.write(json_str)
         
-export_a=Output([1,2,3,4],[" notAffected "," notAffected "," notAffected "," notAffected "],[" notAffected "," notAffected "," notAffected "," notAffected "],"a")
+export_a=Output([1,2,3,4],["notAffected","notAffected","notAffected","notAffected"],["notAffected","notAffected","notAffected","notAffected"],"a")
 export_a.export()

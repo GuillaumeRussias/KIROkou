@@ -26,7 +26,7 @@ class Input():
             ◦ id contient l’id de i (un entier ≥ 0)
             ◦ sensDepart un booléen égal à true si i ∈ Id et false si i ∈ Ia
             ◦ voieEnLigne contient `i
-            ◦  voieAQuai contient qi
+            ◦ voieAQuai contient qi
     -list(str) voiesAQuai : contient la liste des voies à quai.
     -list(str) voiesEnLigne : contient la liste des voies en ligne.
     -list(dict) interdictionsQuais : contient les contraintes de quais de F. Pour chacune,
