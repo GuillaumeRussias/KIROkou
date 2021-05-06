@@ -13,11 +13,20 @@ sys.path.insert(0, parentdir)
 import json
 #export en json??
 
-def test_export():
-    dict_to_export = {"clef1":1,"clef2":3,"clef3":["bonjour","les",1,False],"clef4": {"subclef4.1":"sousdictionnaire"}}
-    str_json = json.dumps(dict_to_export)
-    with open("Output/test.json","w") as json_file:
-        json_file.write(str_json)
-
-test_export()
-    
+class Output():
+    def __init__(self,trains_id_list,train_affect_list,train_itineraire_list,name_export="A"):
+        self.json_dict={}
+        self.name = name_export
+        for i in range(len(trains_id_list)):
+            id_ = trains_id_list[i]
+            affect_ = train_affect_list[i]
+            itineraire_ = train_itineraire_list[i]
+            self.json_dict[str(id_)]= {" voieAQuai ": affect_," itineraire ":itineraire_}
+        
+    def export(self):
+        json_str = json.dumps(self.json_dict)
+        with open(f"Output/{self.name}.json","w") as json_file:
+            json_file.write(json_str)
+        
+export_a=Output([1,2,3,4],[" notAffected "," notAffected "," notAffected "," notAffected "],[" notAffected "," notAffected "," notAffected "," notAffected "],"a")
+export_a.export()
